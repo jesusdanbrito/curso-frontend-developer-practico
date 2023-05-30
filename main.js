@@ -3,7 +3,7 @@ const desktMen = document.querySelector('.desktop-menu');
 const hidMen = document.querySelector('.menu');
 const mobileHidMen = document.querySelector('.mobile-menu');
 const shoppingCart = document.querySelector('.navbar-shopping-cart');
-const asideProductDetail = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container')
 
 
@@ -12,19 +12,19 @@ navEmail.addEventListener("click", showDesktMenu );
 shoppingCart.addEventListener("click", showShoppingCart)
 
 function showHidMen(){
-    const isAsideProductDetailClose = asideProductDetail.classList.contains('inactive');
+    const isShoppingCartContainer = shoppingCartContainer.classList.contains('inactive');
 
-    if (!isAsideProductDetailClose) {
-    asideProductDetail.classList.add('inactive')
+    if (!isShoppingCartContainer) {
+     shoppingCartContainer.classList.add('inactive')
     }
     mobileHidMen.classList.toggle('inactive');
 }
 
 function showDesktMenu (){
-    const isAsideProductDetailClose = asideProductDetail.classList.contains('inactive');
+    const isAsideProductDetailClose = shoppingCartContainer.classList.contains('inactive');
 
     if (!isAsideProductDetailClose) {
-    asideProductDetail.classList.add('inactive')
+        shoppingCartContainer.classList.add('inactive')
     }
     desktMen.classList.toggle('inactive');
 }
@@ -34,7 +34,7 @@ function showShoppingCart(){
     if (!isMobileHidMenClose) {
     mobileHidMen.classList.add('inactive')
     }
-    asideProductDetail.classList.toggle('inactive')
+    shoppingCartContainer.classList.toggle('inactive')
 }
 
 const productList = [];
@@ -54,6 +54,11 @@ name: "Computadora",
 price: 600,
 image: "https://http2.mlstatic.com/D_NQ_NP_896471-MLA53515357380_012023-O.jpg"   
 });
+productList.push({
+    name: "X-BOX 360",
+    price: 900,
+    image: "https://m.media-amazon.com/images/I/51fAvpBWgmL.jpg"   
+    });
 
 function renderProducts(arr){
 for (product of arr){

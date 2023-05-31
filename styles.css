@@ -1,6 +1,7 @@
 :root {
     --white: #FFFFFF;
     --black: #000000;
+    --beige: #F5F5DC;
     --very-light-pink: #C7C7C7;
     --text-input-field: #F7F7F7;
     --hospital-green: #ACD9B2;
@@ -125,13 +126,13 @@
   /*Mobile Menu*/
 
   .mobile-menu {
-    background: var(--white);
     position: absolute;
-    top: 60px;
-    padding: 24px;
+    background-color: var(--white);
+    top: 61px;
     left: 0;
-    width: 100%;
-  }
+    width: calc(100% - 48px);
+    padding-left: 24px;
+  } 
   .mobile-menu a {
     text-decoration: none;
     color: var(--black);
